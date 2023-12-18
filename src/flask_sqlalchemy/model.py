@@ -20,7 +20,7 @@ class _QueryProperty:
 
     def __get__(self, obj: Model | None, cls: type[Model]) -> Query:
         return cls.query_class(
-            cls, session=cls.__fsa__.session()  # type: ignore[arg-type]
+            cls, session=cls.__fsa__.session()
         )
 
 
